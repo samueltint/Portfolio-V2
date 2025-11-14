@@ -10,7 +10,7 @@ function App() {
         <Toaster />
         <Navbar />
         <main className="w-full">
-          <section id="home" className="min-h-screen pt-24">
+          <section id="home" className="min-h-screen md:pt-24">
             <HeaderCard />
           </section>
 

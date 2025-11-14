@@ -1,8 +1,14 @@
-import { AtSign, Home } from "lucide-react";
+import { AtSign, Home, Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Github, Linkedin } from "./ui/icons";
 import { toast } from "sonner";
 import { Link } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 
 function Navbar() {
   const copyEmail = () => {
@@ -12,7 +18,7 @@ function Navbar() {
 
   return (
     <nav className="sticky top-0 p-4 pr-8 w-screen flex items-center z-50">
-      <div className="flex space-x-4 items-center">
+      <div className="hidden md:flex space-x-4 items-center">
         <Button
           asChild
           variant={"shadow"}
@@ -36,6 +42,9 @@ function Navbar() {
           <a href="#education">Education</a>
         </Button>
       </div>
+
+      <ModeToggle />
+
       <div className="flex-1" />
       <div className="flex space-x-4 items-center">
         <Button variant={"shadow"} size={"icon-lg"} className="rounded-full">
@@ -103,5 +112,35 @@ function Navbar() {
 //     </DropdownMenu>
 //   );
 // }
+
+function ModeToggle() {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button
+          variant={"shadow"}
+          size={"icon-lg"}
+          className="md:hidden rounded-full"
+        >
+          <Menu className="size-5" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="start">
+        <DropdownMenuItem asChild>
+          <a href="#home">Home</a>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <a href="#experience">Experience</a>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <a href="#projects">Projects</a>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <a href="#education">Education</a>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
 
 export default Navbar;
