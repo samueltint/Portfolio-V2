@@ -5,9 +5,10 @@ import { ThemeProvider } from "./components/theme-provider";
 function App() {
   return (
     <ThemeProvider>
-      <div className="bg-amber-50 min-h-screen flex flex-col font-display">
+      <div className="bg-screen-background min-h-screen h-fit flex flex-col font-display">
         <Navbar />
         <HeaderCard />
+        <div className="h-[2000px]" />
       </div>
     </ThemeProvider>
   );

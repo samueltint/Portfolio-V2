@@ -1,6 +1,5 @@
-import { Home } from "lucide-react";
+import { AtSign, Home, Moon, Sun } from "lucide-react";
 import { Button } from "./ui/button";
-import { Moon, Sun } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,33 +7,39 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useTheme } from "@/components/theme-provider";
+import { Github, Linkedin } from "./ui/icons";
 
 function Navbar() {
   return (
-    <nav className="sticky top-0 p-4 z-10 flex items-center">
-      <NavButtonGroup />
+    <nav className="sticky top-0 p-4 z-50 flex items-center">
+      <div className="flex space-x-4 items-center">
+        <Button variant={"shadow"} size={"icon-lg"} className="rounded-full">
+          <Home />
+        </Button>
+        <Button variant={"shadow"} size={"lg"} className="rounded-full">
+          Experience
+        </Button>
+        <Button variant={"shadow"} size={"lg"} className="rounded-full">
+          Projects
+        </Button>
+        <Button variant={"shadow"} size={"lg"} className="rounded-full">
+          Education
+        </Button>
+      </div>
       <div className="flex-1" />
-      <ModeToggle />
+      <div className="flex space-x-4 items-center">
+        <Button variant={"shadow"} size={"icon-lg"} className="rounded-full">
+          <Github />
+        </Button>
+        <Button variant={"shadow"} size={"icon-lg"} className="rounded-full">
+          <Linkedin />
+        </Button>
+        <Button variant={"shadow"} size={"icon-lg"} className="rounded-full">
+          <AtSign />
+        </Button>
+        <ModeToggle />
+      </div>
     </nav>
-  );
-}
-
-function NavButtonGroup() {
-  return (
-    <div className="flex space-x-4 items-center">
-      <Button variant={"shadow"} size={"icon-lg"} className="rounded-full">
-        <Home />
-      </Button>
-      <Button variant={"shadow"} size={"lg"} className="rounded-full">
-        Experience
-      </Button>
-      <Button variant={"shadow"} size={"lg"} className="rounded-full">
-        Projects
-      </Button>
-      <Button variant={"shadow"} size={"lg"} className="rounded-full">
-        Education
-      </Button>
-    </div>
   );
 }
 
