@@ -8,62 +8,36 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useTheme } from "@/components/theme-provider";
 import { Github, Linkedin } from "./ui/icons";
-import { GlassCard } from "@developer-hub/liquid-glass";
 
 function Navbar() {
   return (
-  <nav className="sticky top-0 isolate z-50">
-      <div className="relative z-40">
-        <GlassCard
-          className="absolute inset-0 w-screen pointer-events-none z-40"
-          aria-hidden={true}
-        ><div className="w-screen h-18"/></GlassCard>
-
-        <div className="p-4 w-screen flex items-center relative z-50">
-          <div className="flex space-x-4 items-center">
-            <Button
-              variant={"shadow"}
-              size={"icon-lg"}
-              className="rounded-full"
-            >
-              <Home />
-            </Button>
-            <Button variant={"shadow"} size={"lg"} className="rounded-full">
-              Experience
-            </Button>
-            <Button variant={"shadow"} size={"lg"} className="rounded-full">
-              Projects
-            </Button>
-            <Button variant={"shadow"} size={"lg"} className="rounded-full">
-              Education
-            </Button>
-          </div>
-          <div className="flex-1" />
-          <div className="flex space-x-4 items-center">
-            <Button
-              variant={"shadow"}
-              size={"icon-lg"}
-              className="rounded-full"
-            >
-              <Github />
-            </Button>
-            <Button
-              variant={"shadow"}
-              size={"icon-lg"}
-              className="rounded-full"
-            >
-              <Linkedin />
-            </Button>
-            <Button
-              variant={"shadow"}
-              size={"icon-lg"}
-              className="rounded-full"
-            >
-              <AtSign />
-            </Button>
-            <ModeToggle />
-          </div>
-        </div>
+    <nav className="sticky top-0 p-4 w-screen flex items-center z-50">
+      <div className="flex space-x-4 items-center">
+        <Button variant={"shadow"} size={"icon-lg"} className="rounded-full">
+          <Home />
+        </Button>
+        <Button variant={"shadow"} size={"lg"} className="rounded-full">
+          Experience
+        </Button>
+        <Button variant={"shadow"} size={"lg"} className="rounded-full">
+          Projects
+        </Button>
+        <Button variant={"shadow"} size={"lg"} className="rounded-full">
+          Education
+        </Button>
+      </div>
+      <div className="flex-1" />
+      <div className="flex space-x-4 items-center">
+        <Button variant={"shadow"} size={"icon-lg"} className="rounded-full">
+          <Github />
+        </Button>
+        <Button variant={"shadow"} size={"icon-lg"} className="rounded-full">
+          <Linkedin />
+        </Button>
+        <Button variant={"shadow"} size={"icon-lg"} className="rounded-full">
+          <AtSign />
+        </Button>
+        <ModeToggle />
       </div>
     </nav>
   );
