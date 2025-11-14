@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function HeaderCard() {
   return (
-    <div className="relative mx-auto my-8 ">
+    <div className="relative w-full my-8 flex place-content-center">
       <div className="flex flex-row  items-center">
         <GlassCard
           displacementScale={10}
@@ -15,21 +15,21 @@ function HeaderCard() {
           className="z-20"
         >
           <p
-            className="font-display font-normal  text-9xl text-sky-700"
+            className="font-display font-normal  text-7xl text-sky-700"
             data-text="Samuel Tint"
           >
             Samuel Tint
           </p>
           <hr className="my-6 border-t border-2 border-sky-800 px-6 w-full" />
           <p
-            className="font-display font-normal text-6xl text-sky-700"
+            className="font-display font-normal text-4xl text-sky-700"
             data-text="Sydney Based Software Developer"
             style={{ filter: "url(#inner-shadow)" }}
           >
             Sydney Based Software Developer
           </p>
         </GlassCard>
-        <div className="h-96 w-96 aspect-square shadow-lg -ml-12 rounded-full overflow-hidden z-10">
+        <div className="h-96 w-96 aspect-square shadow-lg -ml-16 rounded-full overflow-hidden z-10">
           <img src="/assets/images/profile.jpg" alt="Profile" />
         </div>
       </div>
