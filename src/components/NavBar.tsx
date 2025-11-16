@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+// import { useTheme } from "./theme-provider";
 
 function Navbar() {
   const copyEmail = () => {
@@ -43,7 +44,7 @@ function Navbar() {
         </Button>
       </div>
 
-      <ModeToggle />
+      <NavGroup />
 
       <div className="flex-1" />
       <div className="flex space-x-4 items-center">
@@ -113,7 +114,7 @@ function Navbar() {
 //   );
 // }
 
-function ModeToggle() {
+function NavGroup() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

@@ -9,7 +9,7 @@ import Section from "./components/Section";
 function App() {
   return (
     <ThemeProvider>
-      <div className="bg-screen-background min-h-screen h-fit flex flex-col font-display">
+      <div className="bg-screen-background min-h-screen w-screen h-fit flex flex-col font-display">
         <Toaster />
         <Navbar />
         <main className="w-full">

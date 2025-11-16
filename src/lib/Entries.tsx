@@ -48,7 +48,7 @@ const entries: Entry[] = [
       "Client Consultation",
       "Team Leadership",
     ],
-    page: "/Chaos1",
+    // page: "/Chaos1",
     images: [
       {
         original: ChaosDashboard,
@@ -101,7 +101,7 @@ const entries: Entry[] = [
     title: "RBT/RDT Mobile App",
     type: "experience",
     subtitle: "NSW Police",
-    page: "/NSWPolice",
+    // page: "/NSWPolice",
     description:
       "Developed a React Native app for NSW police officers to record and store RBT/RDT data digitally.",
     tags: ["TypeScript", "React Native", "Docker", "Figma"],

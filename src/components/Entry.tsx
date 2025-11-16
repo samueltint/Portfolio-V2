@@ -27,7 +27,7 @@ function EntryCard({
       }
     >
       {showExternal && (
-        <ExternalLink className="absolute top-2 right-2 h-12 w-12 aspect-square p-2 stroke-accent transition-all" />
+        <ExternalLink className="absolute top-2 right-2 h-12 w-12 aspect-square p-2 stroke-muted-foreground transition-all" />
       )}
       <div className="flex flex-col items-start p-1 gap-2">
         <div className=" text-xl sm:text-2xl leading-8 text-foreground">
@@ -44,7 +44,7 @@ function EntryCard({
               {tags.map((tag) => (
                 <div
                   key={tag}
-                  className="whitespace-nowrap py-1 px-3 w-fit rounded-full text-xs sm:text-md text-white bg-slate-400"
+                  className="whitespace-nowrap py-1 px-3 w-fit rounded-full text-xs sm:text-md text-muted bg-muted-foreground"
                 >
                   {tag}
                 </div>
