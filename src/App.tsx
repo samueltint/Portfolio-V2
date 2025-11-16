@@ -2,6 +2,9 @@ import { Toaster } from "sonner";
 import HeaderCard from "./components/HeaderCard";
 import Navbar from "./components/NavBar";
 import { ThemeProvider } from "./components/theme-provider";
+import { entries } from "./lib/Entries";
+import Entry from "./components/Entry";
+import Section from "./components/Section";
 
 function App() {
   return (
@@ -10,36 +13,43 @@ function App() {
         <Toaster />
         <Navbar />
         <main className="w-full">
-          <section id="home" className="min-h-screen md:pt-24">
+          <section id="home" className=" md:pt-24">
             <HeaderCard />
           </section>
 
-          <section
-            id="experience"
-            aria-label="Experience"
-            className="min-h-screen flex items-center justify-center pt-24"
-          >
+          <Section id="experience" ariaLabel="Experience">
             <h2 className="text-3xl font-semibold">Experience</h2>
-            {/* blank content for now */}
-          </section>
+            {entries
+              .filter((entry) => entry.type === "experience")
+              .map((entry) => (
+                <Entry key={entry.id ?? entry.title} {...entry}>
+                  {entry.description}
+                </Entry>
+              ))}
+          </Section>
 
-          <section
-            id="projects"
-            aria-label="Projects"
-            className="min-h-screen flex items-center justify-center pt-24"
-          >
+          <Section id="projects" ariaLabel="Projects">
             <h2 className="text-3xl font-semibold">Projects</h2>
-            {/* blank content for now */}
-          </section>
+            {entries
+              .filter((entry) => entry.type === "project")
+              .map((entry) => (
+                <Entry key={entry.id ?? entry.title} {...entry}>
+                  {entry.description}
+                </Entry>
+              ))}
+          </Section>
 
-          <section
-            id="education"
-            aria-label="Education"
-            className="min-h-screen flex items-center justify-center pt-24"
-          >
+          <Section id="education" ariaLabel="Education">
             <h2 className="text-3xl font-semibold">Education</h2>
-            {/* blank content for now */}
-          </section>
+            {entries
+              .filter((entry) => entry.type === "education")
+              .map((entry) => (
+                <Entry key={entry.id ?? entry.title} {...entry}>
+                  {entry.description}
+                </Entry>
+              ))}
+          </Section>
+          <div className="h-36" />
         </main>
       </div>
     </ThemeProvider>

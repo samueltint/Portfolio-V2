@@ -39,7 +39,7 @@ function HeaderCard() {
 
   return (
     <div className="relative w-full my-8 flex place-content-center">
-      <div className="flex flex-row  items-center mx-4">
+      <div className="flex flex-row items-center mx-4">
         <GlassCard
           displacementScale={10}
           padding={padding}
@@ -47,7 +47,7 @@ function HeaderCard() {
           className="z-20"
         >
           <p
-            className="font-display font-normal  text-4xl md:text-7xl text-sky-700"
+            className="font-display font-normal text-4xl md:text-7xl text-sky-700"
             data-text="Samuel Tint"
           >
             Samuel Tint

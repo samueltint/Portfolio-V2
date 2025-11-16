@@ -1,4 +1,4 @@
-import { AtSign, Home, Menu } from "lucide-react";
+import { ArrowUp, AtSign, Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Github, Linkedin } from "./ui/icons";
 import { toast } from "sonner";
@@ -17,7 +17,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 p-4 pr-8 w-screen flex items-center z-50">
+    <nav className="sticky top-0 p-4 md:mr-8 w-screen flex items-center z-50">
       <div className="hidden md:flex space-x-4 items-center">
         <Button
           asChild
@@ -26,7 +26,7 @@ function Navbar() {
           className="rounded-full"
         >
           <a href="#home" aria-label="Go to home">
-            <Home className="size-5" />
+            <ArrowUp className="size-5" />
           </a>
         </Button>
 
