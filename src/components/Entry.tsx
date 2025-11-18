@@ -1,6 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { type ReactNode, type JSX } from "react";
+import { Card, CardContent } from "./ui/card";
 
 interface EntryCardProps {
   title: string;
@@ -20,24 +21,20 @@ function EntryCard({
   children,
 }: EntryCardProps): JSX.Element {
   return (
-    <div
-      className={
-        "relative bg-background p-4 shadow-md rounded-2xl transition-all" +
-        (clickable ? " hover:bg-muted hover:-mx-0.5" : "")
-      }
-    >
-      {showExternal && (
-        <ExternalLink className="absolute top-2 right-2 h-12 w-12 aspect-square p-2 stroke-muted-foreground transition-all" />
-      )}
-      <div className="flex flex-col items-start p-1 gap-2">
-        <div className=" text-xl sm:text-2xl leading-8 text-foreground">
-          {title}
+    <Card className={`relative p-4 ${clickable ? "" : "hover:shadow-md"}`}>
+      <CardContent className="flex flex-col gap-2 pb-2 pt-0 px-2">
+        {/* added min-w-0 so the title container can shrink/truncate inside the header */}
+        <div className="flex items-center text-xl sm:text-2xl leading-8 text-foreground min-w-0 pr-12">
+          <span className="truncate">{title}</span>
           {subtitle && (
-            <span className="py-2 whitespace-nowrap sm:py-0 italic text-xl sm:text-2xl text-accent-foreground font-normal inline">
+            <span className="ml-2 italic text-accent-foreground font-normal truncate">
               {" - " + subtitle}
             </span>
           )}
         </div>
+        {showExternal && (
+          <ExternalLink className="absolute top-2 right-2 h-12 w-12 aspect-square p-2 stroke-muted-foreground transition-all" />
+        )}
         <div className="flex flex-wrap flex-1 gap-2 ">
           {tags && (
             <>
@@ -52,11 +49,11 @@ function EntryCard({
             </>
           )}
         </div>
-      </div>
-      <div className="pl-2 text-md sm:text-lg whitespace-pre-wrap">
-        {children}
-      </div>
-    </div>
+        <div className="text-md sm:text-lg whitespace-pre-wrap pt-4">
+          {children}
+        </div>
+      </CardContent>
+    </Card>
   );
 }
 
