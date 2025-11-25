@@ -47,26 +47,26 @@ function HeaderCard() {
           className="z-20"
         >
           <p
-            className="font-display font-normal text-4xl md:text-7xl text-sky-700"
+            className="font-display font-normal text-4xl lg:text-7xl text-sky-700"
             data-text="Samuel Tint"
           >
             Samuel Tint
           </p>
-          <hr className="my-2 md:my-6 border-t border-0 md:border-2 border-sky-800 px-6 w-full" />
+          <hr className="my-2 lg:my-6 border-t border-0 lg:border-2 border-sky-800 px-6 w-full" />
           <p
-            className="font-display font-normal text-2xl md:text-4xl text-sky-700"
+            className="font-display font-normal text-2xl lg:text-4xl text-sky-700"
             data-text="Sydney Based Software Developer"
             style={{ filter: "url(#inner-shadow)" }}
           >
             Sydney Based Software Developer
           </p>
         </GlassCard>
-        <div className="hidden md:block h-96 w-96 aspect-square shadow-lg -ml-16 rounded-full overflow-hidden z-10">
+        <div className="hidden lg:block h-96 w-96 aspect-square shadow-lg -ml-16 rounded-full overflow-hidden z-10">
           <img src="/assets/images/profile.jpg" alt="Profile" />
         </div>
       </div>
       <img
-        className="translate-y-5 md:translate-0 absolute inset-0 z-0 object-cover overflow-visible w-full max-w-1/2 mx-auto h-full"
+        className="translate-y-5 lg:translate-0 absolute inset-0 z-0 object-cover overflow-visible w-full max-w-1/2 mx-auto h-full"
         src="/assets/images/colourful-backdrop.png"
       />
     </div>

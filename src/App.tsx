@@ -22,9 +22,7 @@ function App() {
             {entries
               .filter((entry) => entry.type === "experience")
               .map((entry) => (
-                <Entry key={entry.id ?? entry.title} {...entry}>
-                  {entry.description}
-                </Entry>
+                <Entry key={entry.id ?? entry.title} {...entry} description={entry.description} body={entry.body} />
               ))}
           </Section>
 
@@ -33,9 +31,7 @@ function App() {
             {entries
               .filter((entry) => entry.type === "project")
               .map((entry) => (
-                <Entry key={entry.id ?? entry.title} {...entry}>
-                  {entry.description}
-                </Entry>
+                <Entry key={entry.id ?? entry.title} {...entry} description={entry.description} body={entry.body} />
               ))}
           </Section>
 
@@ -44,9 +40,7 @@ function App() {
             {entries
               .filter((entry) => entry.type === "education")
               .map((entry) => (
-                <Entry key={entry.id ?? entry.title} {...entry}>
-                  {entry.description}
-                </Entry>
+                <Entry key={entry.id ?? entry.title} {...entry} description={entry.description} body={entry.body} />
               ))}
           </Section>
           <div className="h-36" />

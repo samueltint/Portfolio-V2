@@ -56,42 +56,41 @@ const entries: Entry[] = [
       },
       {
         original: ChaosKanban,
-        description: `Kanban board, with rearrangable cards to represent tasks. These tasks can then be imported into the main project framework.`,
+        description: `Kanban board with rearrangeable cards representing tasks. These tasks can then be imported into the main project framework.`,
       },
     ],
     body: (
       <>
         <h2 className="italic text-slate-500 text-xl">Dec 2023 - Aug 2024</h2>
         <div className="pt-4">
-          <p className="pl-2 text-md sm:text-xl whitespace-pre-wrap ">
+          <p className="pl-2 text-md sm:text-xl whitespace-pre-wrap">
             Chaos 1 are a defence innovation company focused on integrating
-            technology with military planning processes. The company had
-            developed a framework aimed at streamlining existing workflows. This
-            project involved the development of a digital platform to improve
-            the usability of the framework and support collaborative planning.
-            The platform also supported existing frameworks such as Kanban and
-            the Military Appreciation Process (MAP),. the user experience was
-            enhanced with collaborative editing features and an AI Chatbot,
-            powered by Vertex AI.
+            technology with military planning processes. The company developed
+            a framework aimed at streamlining existing workflows. This project
+            involved creating a digital platform to improve the framework's
+            usability and support collaborative planning. The platform also
+            supported existing methodologies such as Kanban and the Military
+            Appreciation Process (MAP). The user experience was enhanced with
+            collaborative editing features and an AI chatbot powered by Vertex
+            AI.
           </p>
         </div>
         <div className="pt-4">
           <h2 className="xl:leading-loose text-2xl xl:text-3xl">{`Background\n`}</h2>
           <p className="pl-2 text-md sm:text-xl whitespace-pre-wrap">
             I was connected to Chaos 1 through the Green Gate internship
-            program, a joint program between UTS and USYD students. Our team was
-            tasked with acting as the company's consultants, designers and
-            developers. I was selected as team leader, which added additional
-            organisation and project management duties on top of my
-            contributions to the website development. After completing the
-            program, I was rehired individually and continued the project
+            program, a joint initiative between UTS and USYD students. Our team
+            acted as the company's consultants, designers, and developers. I
+            was selected as team leader, which added organisation and project
+            management duties in addition to my development contributions. After
+            completing the program, I was rehired and continued the project
             alongside a team of senior developers.
           </p>
         </div>
 
         <div className="pt-4 pb-8">
           <h2 className="xl:leading-loose text-2xl xl:text-3xl">{`My Contributions\n`}</h2>
-          <p className="pl-2 text-md sm:text-lg whitespace-pre-wrap italic">{`Under NDA - original screenshots cannot be disclosed. Recreated designs have been provided.\n`}</p>
+          <p className="pl-2 text-md sm:text-lg whitespace-pre-wrap italic">{`Under NDA — original screenshots cannot be disclosed. Recreated designs are provided.\n`}</p>
         </div>
       </>
     ),
@@ -118,25 +117,23 @@ const entries: Entry[] = [
       <>
         <div className="pt-4">
           <p className="pl-2 text-md sm:text-xl whitespace-pre-wrap">
-            The current workflow for NSW police to record and store the data
-            collected during RBT and RDT stops is currently inefficient due to
-            the reliance on hand written reports. To streamline these processes,
-            a mobile app was being designed as a hub for many police reporting
-            tasks. Our team was tasked with developing a prototype for a digital
-            form. My primary responsibility was in UI/UX design, where I focused
-            on creating a simple and intuitive interface to ensure that officers
-            could efficiently input data during stops.
+            The workflow for NSW Police officers to record and store data
+            collected during RBT and RDT stops was inefficient due to reliance
+            on handwritten reports. To streamline these processes, a mobile app
+            was designed to act as a hub for many police reporting tasks. Our
+            team developed a prototype for a digital form. My primary
+            responsibility was UI/UX design, focusing on a simple, intuitive
+            interface so officers could efficiently enter data during stops.
           </p>
-        </div>{" "}
+        </div>
         <div className="pt-4">
           <h2 className="xl:leading-loose text-2xl xl:text-3xl">{`Background\n`}</h2>
           <p className="pl-2 pb-6 text-md sm:text-xl whitespace-pre-wrap">
             This project was completed as part of the UTS Software Development
-            Studio, where teams of students were able to complete a project for
-            a real world client. Throughout the project we were tasked with
-            acting as consultants for our clients to elucidate their needs, and
-            regularly provide samples and reports to ensure the product matched
-            their intended vision.
+            Studio, where student teams delivered projects for real-world
+            clients. Throughout the engagement, we acted as consultants to
+            clarify the client's needs and regularly provided samples and
+            reports to ensure the product matched their vision.
           </p>
         </div>
       </>
@@ -183,11 +180,11 @@ const entries: Entry[] = [
     link: "https://github.com/samueltint/processing-projects",
   },
   {
-    title: "Bachelors of Engineering (Software)",
+    title: "Bachelor of Engineering (Software)",
     type: "education",
 
     subtitle: "University of Technology Sydney",
-    description: "\u2022 4th year student\n\u2022 Expected graduation in 2026",
+    description: "\u2022 Fourth-year student\n\u2022 Expected graduation in 2026",
   },
 ];
 
