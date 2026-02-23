@@ -1,4 +1,4 @@
-import { ArrowUp, AtSign, Menu } from "lucide-react";
+import { Home, AtSign, Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Github, Linkedin } from "./ui/icons";
 import { toast } from "sonner";
@@ -14,11 +14,11 @@ import {
 function Navbar() {
   const copyEmail = () => {
     navigator.clipboard.writeText("samueltint2@gmail.com");
-    toast("Email copied to clipboard");
+    toast("'Samueltint2@gmail.com' copied to clipboard");
   };
 
   return (
-    <nav className="sticky top-0 p-4 md:mr-8 w-screen flex items-center z-50">
+    <nav className="fixed top-0 p-4 md:mr-8 w-screen flex items-center z-50">
       <div className="hidden md:flex space-x-4 items-center">
         <Button
           asChild
@@ -27,7 +27,7 @@ function Navbar() {
           className="rounded-full"
         >
           <a href="#home" aria-label="Go to home">
-            <ArrowUp className="size-5" />
+            <Home className="size-5" />
           </a>
         </Button>
 

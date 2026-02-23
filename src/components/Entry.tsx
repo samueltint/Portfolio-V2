@@ -8,6 +8,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface EntryCardProps {
   title: string;
@@ -17,6 +24,10 @@ interface EntryCardProps {
   showExternal?: boolean;
   description?: ReactNode;
   body?: ReactNode;
+  images?: {
+    original: string;
+    description: string;
+  }[];
 }
 
 function Header({
@@ -29,23 +40,23 @@ function Header({
     <div className="flex flex-col w-full gap-2">
       <div className="text-xl sm:text-2xl leading-8 text-foreground min-w-0 pr-12">
         {title}
-      {subtitle && (
-        <span className="text-xl sm:text-2xl leading-8 italic text-muted-foreground min-w-0 pr-12">
-          {` - ${subtitle}`}
-        </span>
-      )}
-      {tags && (
-        <div className="flex flex-wrap flex-1 gap-2 pt-4">
-          {tags.map((tag) => (
-            <div
-              key={tag}
-              className="whitespace-nowrap py-1 px-3 w-fit rounded-full text-xs sm:text-md text-muted bg-muted-foreground"
-            >
-              {tag}
-            </div>
-          ))}
-        </div>
-      )}
+        {subtitle && (
+          <span className="text-xl sm:text-2xl leading-8 italic text-muted-foreground min-w-0 pr-12">
+            {` - ${subtitle}`}
+          </span>
+        )}
+        {tags && (
+          <div className="flex flex-wrap flex-1 gap-2 pt-4">
+            {tags.map((tag) => (
+              <div
+                key={tag}
+                className="whitespace-nowrap py-1 px-3 w-fit rounded-full text-xs sm:text-md text-muted bg-muted-foreground"
+              >
+                {tag}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
       {showExternal && (
         <ExternalLink className="absolute top-2 right-2 h-12 w-12 aspect-square p-2 stroke-muted-foreground transition-all" />
@@ -62,6 +73,7 @@ function EntryCard({
   showExternal,
   description,
   body,
+  images,
 }: EntryCardProps): JSX.Element {
   const useAccordion = !!body && !!description;
 
@@ -94,6 +106,30 @@ function EntryCard({
               </AccordionTrigger>
               <AccordionContent className="flex flex-col gap-4 text-balance">
                 {body}
+                {images != null && (
+                  <div className="px-12">
+                    <Carousel className="lg:max-w-1/2">
+                      <CarouselContent>
+                        {images.map((image) => (
+                          <CarouselItem key={image.original}>
+                            <div className="flex flex-col gap-2">
+                              <img
+                                src={image.original}
+                                alt={image.description}
+                                className="rounded-md object-cover aspect-video"
+                              />
+                              <p className="text-sm text-muted-foreground">
+                                {image.description}
+                              </p>
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious />
+                      <CarouselNext />
+                    </Carousel>
+                  </div>
+                )}
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -126,6 +162,10 @@ interface EntryProps {
   body: ReactNode;
   link?: string;
   page?: string;
+  images?: {
+    original: string;
+    description: string;
+  }[];
 }
 
 export default function Entry({
@@ -136,6 +176,7 @@ export default function Entry({
   body,
   link,
   page,
+  images,
 }: EntryProps): JSX.Element {
   return (
     <>
@@ -149,6 +190,7 @@ export default function Entry({
             showExternal
             description={description}
             body={body}
+            images={images}
           />
         </a>
       ) : page ? (
@@ -160,6 +202,7 @@ export default function Entry({
             clickable
             description={description}
             body={body}
+            images={images}
           />
         </Link>
       ) : (
@@ -170,6 +213,7 @@ export default function Entry({
             tags={tags}
             description={description}
             body={body}
+            images={images}
           />
         </div>
       )}

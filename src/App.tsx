@@ -9,9 +9,9 @@ import Section from "./components/Section";
 function App() {
   return (
     <ThemeProvider>
-      <div className="bg-screen-background min-h-screen w-screen h-fit flex flex-col font-display">
-        <Toaster />
+      <div className="bg-screen-background min-h-screen w-screen h-fit font-display">
         <Navbar />
+        <Toaster />
         <main className="w-full">
           <section id="home" className=" md:pt-24">
             <HeaderCard />
@@ -22,7 +22,13 @@ function App() {
             {entries
               .filter((entry) => entry.type === "experience")
               .map((entry) => (
-                <Entry key={entry.id ?? entry.title} {...entry} description={entry.description} body={entry.body} />
+                <Entry
+                  key={entry.id ?? entry.title}
+                  {...entry}
+                  description={entry.description}
+                  body={entry.body}
+                  images={entry.images}
+                />
               ))}
           </Section>
 
@@ -31,7 +37,13 @@ function App() {
             {entries
               .filter((entry) => entry.type === "project")
               .map((entry) => (
-                <Entry key={entry.id ?? entry.title} {...entry} description={entry.description} body={entry.body} />
+                <Entry
+                  key={entry.id ?? entry.title}
+                  {...entry}
+                  description={entry.description}
+                  body={entry.body}
+                  images={entry.images}
+                />
               ))}
           </Section>
 
@@ -40,7 +52,13 @@ function App() {
             {entries
               .filter((entry) => entry.type === "education")
               .map((entry) => (
-                <Entry key={entry.id ?? entry.title} {...entry} description={entry.description} body={entry.body} />
+                <Entry
+                  key={entry.id ?? entry.title}
+                  {...entry}
+                  description={entry.description}
+                  body={entry.body}
+                  images={entry.images}
+                />
               ))}
           </Section>
           <div className="h-36" />

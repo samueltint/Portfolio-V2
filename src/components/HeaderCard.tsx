@@ -38,8 +38,8 @@ function HeaderCard() {
   }, []);
 
   return (
-    <div className="relative w-full my-8 flex place-content-center">
-      <div className="flex flex-row items-center mx-4">
+    <div className="relative w-full  flex place-content-center">
+      <div className="flex flex-row items-center mt-20 lg:mt-0 mx-4">
         <GlassCard
           displacementScale={10}
           padding={padding}

@@ -25,6 +25,57 @@ const entries: Entry[] = [
   {
     id: "chaos1",
     type: "experience",
+    title: "Digitised Evaluation and Report Generation Platform",
+    subtitle: "Chaos 1",
+    description:
+      "Design and development updated evaluation framework and a web-based platform for data recording and report generation.",
+    tags: [
+      "Flutter",
+      "Spring Boot",
+      "Google Cloud Platform",
+      "PostgreSQL",
+      "Docker",
+    ],
+    fullTags: [
+      "Flutter",
+      "Spring Boot",
+      "Java",
+      "Google Cloud Platform",
+      "Docker",
+      "PostgreSQL",
+      "Figma",
+      "CI/CD",
+      "Terraform",
+    ],
+    // page: "/Chaos1",
+    body: (
+      <>
+        <h2 className="italic text-slate-500 text-xl">July 2024 - Feb 2026</h2>
+        <div className="pt-4">
+          <p className="pl-2 text-md sm:text-xl whitespace-pre-wrap w-full">
+            This project consisted of two main components: updating an existing
+            evaluation framework and developing a web-based platform to support
+            it. The platform allowed users to input data, evaluate using context
+            based rating systems, and generate reports aligned with US military
+            standards.
+          </p>
+        </div>
+        <div className="pt-4">
+          <p className="pl-2 text-md sm:text-xl whitespace-pre-wrap">
+            The project was eventually deployed using tools in the Google Cloud
+            Platform ecosystem, including Cloud Run for hosting and Cloud SQL
+            for database management. CI/CD was implemented through GitLab and
+            Cloud run. Terraform was used to manage infrastructure as code,
+            ensuring a scalable and maintainable deployment process.
+          </p>
+        </div>
+      </>
+    ),
+  },
+
+  {
+    id: "chaos1internship",
+    type: "experience",
     title: "Project Management Website with AI Integration",
     subtitle: "Chaos 1",
     description:
@@ -61,12 +112,12 @@ const entries: Entry[] = [
     ],
     body: (
       <>
-        <h2 className="italic text-slate-500 text-xl">Dec 2023 - Aug 2024</h2>
+        <h2 className="italic text-slate-500 text-xl">Dec 2023 - May 2024</h2>
         <div className="pt-4">
           <p className="pl-2 text-md sm:text-xl whitespace-pre-wrap">
             Chaos 1 are a defence innovation company focused on integrating
-            technology with military planning processes. The company developed
-            a framework aimed at streamlining existing workflows. This project
+            technology with military planning processes. The company developed a
+            framework aimed at streamlining existing workflows. This project
             involved creating a digital platform to improve the framework's
             usability and support collaborative planning. The platform also
             supported existing methodologies such as Kanban and the Military
@@ -80,8 +131,8 @@ const entries: Entry[] = [
           <p className="pl-2 text-md sm:text-xl whitespace-pre-wrap">
             I was connected to Chaos 1 through the Green Gate internship
             program, a joint initiative between UTS and USYD students. Our team
-            acted as the company's consultants, designers, and developers. I
-            was selected as team leader, which added organisation and project
+            acted as the company's consultants, designers, and developers. I was
+            selected as team leader, which added organisation and project
             management duties in addition to my development contributions. After
             completing the program, I was rehired and continued the project
             alongside a team of senior developers.
@@ -157,8 +208,7 @@ const entries: Entry[] = [
     title: "Slime Mold Simulation",
     type: "project",
 
-    description:
-      "A simulation of a slime mold (Physarum Polycephalum) to explore organic simulations.",
+    description: "A simulation of a slime mold to explore organic simulations.",
     tags: ["Processing", "Java"],
     link: "https://github.com/samueltint/Slime-Mould-Sim",
   },
@@ -180,11 +230,20 @@ const entries: Entry[] = [
     link: "https://github.com/samueltint/processing-projects",
   },
   {
+    title: "Portfolio",
+    type: "project",
+    description:
+      "A personal portfolio website to showcase my projects and experience.",
+    tags: ["Typescript", "React", "TailwindCSS"],
+    link: "https://github.com/samueltint/Portfolio-V2",
+  },
+  {
     title: "Bachelor of Engineering (Software)",
     type: "education",
 
     subtitle: "University of Technology Sydney",
-    description: "\u2022 Fourth-year student\n\u2022 Expected graduation in 2026",
+    description:
+      "\u2022 Fourth-year student\n\u2022 Expected graduation in 2026",
   },
 ];
 
