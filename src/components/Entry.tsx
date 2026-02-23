@@ -37,14 +37,15 @@ function Header({
   showExternal,
 }: Pick<EntryCardProps, "title" | "subtitle" | "tags" | "showExternal">) {
   return (
-    <div className="flex flex-col w-full gap-2">
-      <div className="text-xl sm:text-2xl leading-8 text-foreground min-w-0 pr-12">
-        {title}
+    <div className="flex flex-col w-full gap-2 " >
+      <div className="text-xl sm:text-2xl leading-8 text-foreground min-w-0 sm:pr-12">
+        {title + " "}
         {subtitle && (
-          <span className="text-xl sm:text-2xl leading-8 italic text-muted-foreground min-w-0 pr-12">
-            {` - ${subtitle}`}
+          <span className="hidden sm:inline-block text-2xl leading-8 italic text-muted-foreground min-w-0">
+            {`- ${subtitle}`}
           </span>
         )}
+        <p className="sm:hidden text-xl leading-8 italic text-muted-foreground min-w-0">{subtitle}</p>
         {tags && (
           <div className="flex flex-wrap flex-1 gap-2 pt-4">
             {tags.map((tag) => (

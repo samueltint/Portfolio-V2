@@ -127,3 +127,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+@custom-variant taos (&.taos-init:where(:not(.taos-animate)));
+
+html.js :where([class*="taos:"]:not(.taos-init)) {
+  visibility: hidden;
+}
+
+@source inline('!duration-[0ms] !delay-[0ms]');
